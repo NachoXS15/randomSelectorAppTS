@@ -8,6 +8,15 @@ interface Props{
 
 export default function OptionsList({options}: Props) {
   return (
-    <Option />
-  )
+    <>
+    { 
+      options.map((option) => {
+        <div className='options' key={option.id}>
+          <Option option={option}/>
+          <h2>agregado</h2>
+        </div>
+      })
+    }
+    </>
+  );
 }
