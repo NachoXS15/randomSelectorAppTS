@@ -1,25 +1,23 @@
 import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.scss';
+import Selector from './components/Selector';
+import { useState } from 'react';
+import IOption from './interfaces/IOption';
+import OptionsList from './components/OptionsList';
 
-function App() {
+function App(): JSX.Element {
+  const [options, setOptions] = useState<IOption[]>([])
+  const addOption = (option: IOption) => setOptions([...options, option]);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h2>¡Selector de Opciones!</h2>
+      <Selector addOptions={addOption}/>
+      <OptionsList options={options}/>
     </div>
+    
   );
 }
 
