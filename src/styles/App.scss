@@ -46,6 +46,7 @@ body{
       outline: none;
       color: white;
     }
+
     input::placeholder{
       border: none;
     }
@@ -58,9 +59,13 @@ body{
       color: white;
     }
   }
+  
   .options{
-    display: flex;
-    margin-top: 10px;
+    color: red;
+  }
+
+  .options-container{
+    margin: 0px 10px;
   }
 }
 

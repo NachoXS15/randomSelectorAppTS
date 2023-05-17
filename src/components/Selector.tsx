@@ -18,11 +18,11 @@ export default function Selector({ addOptions }: Props) {
     e.preventDefault();
     addOptions(option);
     setOption({
-      name: "",
+      name: ""
     });
   };
 
-  const handleInputValue = ({target: { name, value }}: dataElement) => {
+  const handleInputValue = ({ target: { name, value } }: dataElement) => {
     setOption({ ...option, [name]: value });
   };
 

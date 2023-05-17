@@ -1,5 +1,4 @@
-import React from 'react';
-import logo from './logo.svg';
+
 import './styles/App.scss';
 import Selector from './components/Selector';
 import { useState } from 'react';
@@ -18,7 +17,6 @@ function App(): JSX.Element {
       <Selector addOptions={addOption}/>
       <OptionsList options={options}/>
     </div>
-    
   );
 }
 
