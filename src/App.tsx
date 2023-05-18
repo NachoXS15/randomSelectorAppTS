@@ -15,7 +15,9 @@ function App(): JSX.Element {
     <div className='container'>
       <h2>¡Selector de Opciones!</h2>
       <Selector addOptions={addOption}/>
-      <OptionsList options={options}/>
+      <div className='options-container'>
+        <OptionsList options={options}/>
+      </div>
     </div>
   );
 }

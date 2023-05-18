@@ -8,8 +8,6 @@ interface Props{
 
 export default function Option({option}: Props) {
   return (
-   <div className='options-container'>
-      <span style={{color: 'red'}}>{option.name}</span>
-   </div>
+    <span className='options'>{option.name}</span>
   )
 }
