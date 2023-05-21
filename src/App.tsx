@@ -8,8 +8,20 @@ import Header from "./components/Header";
 function App(): JSX.Element {
   const [options, setOptions] = useState<IOption[]>([]);
   const getCurrentTimestamp = () => new Date().getTime();
-  const addOption = (option: IOption) =>
-    setOptions([...options, { ...option, id: getCurrentTimestamp() }]);
+  const addOption = (option: IOption) => setOptions([...options, { ...option, id: getCurrentTimestamp() }]);
+
+  const [optionRandom, setoptionRandom] = useState<IOption>();
+
+  const handleRandomOption = () => {
+    const index = Math.floor(Math.random() * options.length);
+    const randomOption = options[index];
+    setoptionRandom(randomOption);
+    console.log(setoptionRandom);
+  }
+
+  const checkOptions = () => {
+    const isOptionsEmpty = options.length === 0;
+  }
 
   return (
     <>
@@ -21,6 +33,12 @@ function App(): JSX.Element {
           <div className="options-container">
             <OptionsList options={options} />
           </div>
+          <button 
+            onClick={checkOptions}
+            className={`button ${options.length === 0  ? 'button-empty' : 'button'}`}
+          >
+            Elegir!
+          </button>     
         </div>
       </div>
       
@@ -29,3 +47,5 @@ function App(): JSX.Element {
 }
 
 export default App;
+
+
