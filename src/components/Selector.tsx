@@ -14,7 +14,6 @@ export default function Selector({ addOptions }: Props) {
   const [option, setOption] = useState({
     name: "",
   });
-  const [inputValue, setInputValue] = useState<IOption>();
 
   const handleSubmit = (e: formElement) => {
     e.preventDefault();
@@ -30,7 +29,6 @@ export default function Selector({ addOptions }: Props) {
 
   const handleInputValue = ({ target: { name, value } }: dataElement) => {
     setOption({ ...option, [name]: value });
-    setInputValue({name: ""});
   };
 
 
@@ -44,6 +42,7 @@ export default function Selector({ addOptions }: Props) {
           value={option.name}
           onChange={handleInputValue}
           name="name"
+          aria-required
         />
         <button className={`button ${option.name === '' ? 'button-empty' : 'button'}`}>Agregar</button>
       </form>

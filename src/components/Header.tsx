@@ -1,7 +1,7 @@
 import xsLogo from '../assets/img/xs-logo-white.png';
-import igIcon from "../assets/svg/instagram.svg";
-import ldIcon from "../assets/svg/linkedin-in.svg";
-import ghIcon from "../assets/svg/github.svg";
+import igIcon from "../assets/svg/brand-instagram.svg";
+import ldIcon from "../assets/svg/brand-linkedin.svg";
+import ghIcon from "../assets/svg/brand-github.svg";
 
 export default function Header() {
   return (
