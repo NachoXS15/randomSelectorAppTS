@@ -1,7 +1,13 @@
 import React from 'react'
+import IOption from '../interfaces/IOption'
 
-export default function Option() {
+interface Props{
+  option: IOption;
+}
+
+
+export default function Option({option}: Props) {
   return (
-    <div>Option</div>
+    <span className='options'>{option.name}</span>
   )
 }

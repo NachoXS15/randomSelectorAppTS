@@ -1,13 +1,17 @@
-import React from 'react'
-import Option from './Option'
-import IOption from '../interfaces/IOption';
-interface Props{
+import React, { useState } from "react";
+import Option from "./Option";
+import IOption from "../interfaces/IOption";
+interface Props {
   options: IOption[];
+  
 }
 
-
-export default function OptionsList({options}: Props) {
+export default function OptionsList({ options }: Props) {
   return (
-    <Option />
-  )
+    <>
+      {options.map((option) => {
+        return <Option option={option} key={option.id}  />;
+      })}
+    </>
+  );
 }
