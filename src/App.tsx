@@ -10,16 +10,11 @@ function App(){
   const getCurrentTimestamp = () => new Date().getTime();
   const addOption = (option: IOption) => setOptions([...options, { ...option, id: getCurrentTimestamp() }]);
 
-  const [optionRandom, setoptionRandom] = useState<IOption>();
-
   const handleRandomOption = () => {
     const index = Math.floor(Math.random() * options.length);
-    const randomOption = options[index];
-    setoptionRandom(randomOption);
-    alert(setoptionRandom);
+    console.log(options[index]);
   }
-
-
+  
   return (
     <>
       <Header />
