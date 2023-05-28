@@ -1,4 +1,4 @@
-import React, { useState, ChangeEvent, FormEvent } from "react";
+import React, { useState, ChangeEvent, FormEvent, useRef } from "react";
 import "../styles/App.scss";
 import IOPtion from "../interfaces/IOption";
 import IOption from "../interfaces/IOption";
@@ -14,6 +14,8 @@ export default function Selector({ addOptions }: Props) {
   const [option, setOption] = useState({
     name: "",
   });
+  const inputRef = useRef<HTMLInputElement | null>(null);
+  inputRef.current?.focus();
 
   const handleSubmit = (e: formElement) => {
     e.preventDefault();
@@ -43,6 +45,7 @@ export default function Selector({ addOptions }: Props) {
           onChange={handleInputValue}
           name="name"
           aria-required
+          ref={inputRef}
         />
         <button className={`button ${option.name === '' ? 'button-empty' : 'button'}`}>Agregar</button>
       </form>
