@@ -3,13 +3,13 @@ import Option from "./Option";
 import IOption from "../interfaces/IOption";
 interface Props {
   options: IOption[];
-  
+  handleClearOptions: ()=> void
 }
 
-export default function OptionsList({ options }: Props) {
+export default function OptionsList({ options, handleClearOptions }: Props) {
   return (
     <>
-      {options.map((option) => {
+      {options.length > 0 && options.map((option) => {
         return <Option option={option} key={option.id}  />;
       })}
     </>

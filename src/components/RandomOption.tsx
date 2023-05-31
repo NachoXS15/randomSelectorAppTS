@@ -1,53 +1,53 @@
 import React, { useState } from "react";
 import IOption from "../interfaces/IOption";
-import { spawn } from "child_process";
-import '../styles/App.scss'
+import "../styles/App.scss";
+import OptionsList from "./OptionsList";
 
 interface Props {
     options: IOption[];
 }
 
-export default function RandomOption({ options }: Props) {
+export default function RandomOption({options}: Props) {
     const [randomOption, setRandomOption] = useState<IOption | null>();
+    const [optionsList, setOptionsList] = useState<IOption[]>([])
     const handleRandomOption = () => {
         const index = Math.floor(Math.random() * options.length);
         const randomOption = options[index];
         setRandomOption(randomOption);
+        console.log(randomOption);
     };
-    const handleClearOptions = () => {
-        options.splice(0, options.length);
-        console.log(options);
+
+    const handleDeleteOptions = () => {
+      setOptionsList([]);
+      console.log(optionsList)
     };
 
     return (
-        <div
-            style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: 'center',
-                flexDirection: 'column',
-                gap: "10px"
-            }}
-        >
-            {randomOption && (
-                <>
-                    <div className="option-picked">
-                        <h4>Option picked is:</h4>
-                        <span>{randomOption.name}</span>
-                    </div>
-                </>
-            )}
-            <button
-                onClick={handleRandomOption}
-                className={`button ${
-                    options.length === 0 ? "button-empty" : "button"
-                }`}
-            >
-                Pick!
-            </button>
-            <button onClick={handleClearOptions} className="button">
-                Delete options
-            </button>
-        </div>
+        <>
+            <div className="options-container">
+                <OptionsList handleClearOptions={handleDeleteOptions} options={options} />
+            </div>
+            <div className="option-picked-container">
+                {randomOption && (
+                    <>
+                        <div className="option-picked">
+                            <h4>Option picked is:</h4>
+                            <span>{randomOption.name}</span>
+                        </div>
+                    </>
+                )}
+                <button
+                    onClick={handleRandomOption}
+                    className={`button ${
+                        options.length === 0 ? "button-empty" : "button"
+                    }`}
+                >
+                    Pick!
+                </button>
+                <button onClick={handleDeleteOptions} className="button">
+                    Delete options
+                </button>
+            </div>
+        </>
     );
 }

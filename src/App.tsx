@@ -21,9 +21,6 @@ function App() {
                 <div className="box">
                     <h2>Random Options Selector!</h2>
                     <Selector addOptions={addOption} />
-                    <div className="options-container">
-                        <OptionsList options={options} />
-                    </div>
                     <RandomOption options={options} />
                 </div>
             </div>

@@ -27,13 +27,12 @@ export default function Selector({ addOptions }: Props) {
         name: ""
       })
     }
+    console.log(option)
   };
 
   const handleInputValue = ({ target: { name, value } }: dataElement) => {
     setOption({ ...option, [name]: value });
   };
-
-
   return (
     <>
       <form onSubmit={handleSubmit}>

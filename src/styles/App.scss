@@ -89,10 +89,13 @@ body{
     padding: 3px 5px;
     color: white;
     cursor: pointer;
+    margin: 10px 5px;
+
   }
   .button-empty{
     border: 1px solid red;
     cursor: not-allowed;
+    margin-top: 10px;
   }
   
   .options-container{
@@ -115,7 +118,8 @@ body{
     justify-content: "center";
     align-items: 'center';
     flex-direction: 'column';
-    gap: "10px";
+    gap: 10px;
+
   }
 
   .option-picked{
