@@ -22,10 +22,14 @@ export default function RandomOption({options}: Props) {
       console.log(optionsList)
     };
 
+    const reloadPage = () => {
+        window.location.reload();
+    }
+
     return (
         <>
             <div className="options-container">
-                <OptionsList handleClearOptions={handleDeleteOptions} options={options} />
+                <OptionsList options={options} />
             </div>
             <div className="option-picked-container">
                 {randomOption && (
@@ -44,7 +48,7 @@ export default function RandomOption({options}: Props) {
                 >
                     Pick!
                 </button>
-                <button onClick={handleDeleteOptions} className="button">
+                <button onClick={reloadPage} className="button">
                     Delete options
                 </button>
             </div>

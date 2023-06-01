@@ -39,7 +39,7 @@ export default function Selector({ addOptions }: Props) {
         <input
           type="text"
           autoFocus
-          placeholder="Introduzca opcion"
+          placeholder="Insert options"
           value={option.name}
           onChange={handleInputValue}
           name="name"
