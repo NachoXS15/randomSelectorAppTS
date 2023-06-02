@@ -14,25 +14,17 @@ function App() {
     const addOption = (option: IOption) =>
         setOptions([...options, { ...option, id: getCurrentTimestamp() }]);
 
-
-
-   
-
     return (
         <>
             <Header />
             <div className="container">
                 <div className="box">
-                    <h2>¡Selector de Opciones!</h2>
+                    <h2>Random Options Selector!</h2>
                     <Selector addOptions={addOption} />
-                    <div className="options-container">
-                        <OptionsList options={options} />
-                    </div>
-                    <RandomOption options={options}/>
+                    <RandomOption options={options} />
                 </div>
             </div>
         </>
     );
 }
-
 export default App;

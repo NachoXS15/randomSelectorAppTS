@@ -20,34 +20,33 @@ export default function Selector({ addOptions }: Props) {
   const handleSubmit = (e: formElement) => {
     e.preventDefault();
     if (option.name === '') {
-      alert("inserte una option");
+      alert("Please, insert an option");
     }else{
       addOptions(option);
       setOption({
         name: ""
       })
     }
+    console.log(option)
   };
 
   const handleInputValue = ({ target: { name, value } }: dataElement) => {
     setOption({ ...option, [name]: value });
   };
-
-
   return (
     <>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           autoFocus
-          placeholder="Introduzca opcion"
+          placeholder="Insert options"
           value={option.name}
           onChange={handleInputValue}
           name="name"
           aria-required
           ref={inputRef}
         />
-        <button className={`button ${option.name === '' ? 'button-empty' : 'button'}`}>Agregar</button>
+        <button className={`button ${option.name === '' ? 'button-empty' : 'button'}`}>Add</button>
       </form>
     </>
   );
