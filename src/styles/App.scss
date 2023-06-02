@@ -98,6 +98,10 @@ body{
     cursor: not-allowed;
     margin-top: 10px;
   }
+
+  .button-none{
+    display: none;
+  }
   
   .options-container{
     width: 60%;
@@ -128,6 +132,8 @@ body{
     place-items: center;
     color: white;
   }
+
+  
 }
 
 

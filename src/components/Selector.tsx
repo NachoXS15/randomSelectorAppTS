@@ -20,7 +20,7 @@ export default function Selector({ addOptions }: Props) {
   const handleSubmit = (e: formElement) => {
     e.preventDefault();
     if (option.name === '') {
-      alert("inserte una option");
+      alert("Please, insert an option");
     }else{
       addOptions(option);
       setOption({
