@@ -15,8 +15,57 @@ body{
   background-image: $fondo;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
+// queries
+
+@media screen and (max-width: 480px){
+  body{
+    min-height: 100vh;
+    min-width: 100vh;  
+  }
+
+  header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    img{
+      width: 130px;
+      height: 130px;
+    }
+  }
+
+  .container{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    margin-top: 60px;
+
+    .box{
+      height: 700px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  body{
+    min-height: 100vh;
+    min-width: 100vh;  
+  }
+
+  header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    
+  }
+
+}
 
 .header{
   width: 100%;
