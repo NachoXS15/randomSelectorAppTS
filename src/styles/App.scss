@@ -3,14 +3,14 @@
 
 $fondo: url('../assets/img/fondo.jpg');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
 }
 
-body{
+body {
   min-height: 100vh;
   background-image: $fondo;
   background-size: cover;
@@ -20,6 +20,36 @@ body{
 
 // queries
 
+.containerBox{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 50%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid white;
+}
+
+#input{
+  border: none;
+  background: none;
+  border-bottom: 1px solid white;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 420px) {
+  .box{
+    width: 75%;
+  }
+}
 
 
 // .header{
@@ -28,7 +58,7 @@ body{
 //   display: flex;
 //   justify-content: space-around;
 //   align-items: center;
-  
+
 //   .logo{
 //     width: 70px;
 //     height: 70px;
@@ -86,55 +116,55 @@ body{
 //       border: none;
 //     }  
 //   }
-//   .button{
-//     border: none;
-//     background-color: transparent;
-//     border: 1px solid white;
-//     padding: 3px 5px;
-//     color: white;
-//     cursor: pointer;
-//     margin: 10px 5px;
+  .button{
+    border: none;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 3px 5px;
+    color: white;
+    cursor: pointer;
+    margin: 10px 5px;
 
-//   }
-//   .button-empty{
-//     border: 1px solid red;
-//     cursor: not-allowed;
-//     margin-top: 10px;
-//   }
+  }
+  .button-empty{
+    border: 1px solid red;
+    cursor: not-allowed;
+    margin-top: 10px;
+  }
 
-//   .button-none{
-//     display: none;
-//   }
-  
-//   .options-container{
-//     width: 60%;
-//     height: 70px;
-//     border: 1px solid white;
-//     color: white;
-//     display: flex;
-//     justify-content: center;
-//     flex-wrap: wrap;
+  .button-none{
+    display: none;
+  }
 
+  .options-container{
+    width: 60%;
+    height: 70px;
+    border: 1px solid white;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 
-//     .options{
-//       margin: 0 5px;
-//     }
-//   }
-
-//   .option-picked-container{
-//     display: "flex";
-//     justify-content: "center";
-//     align-items: 'center';
-//     flex-direction: 'column';
-//     gap: 10px;
-
+    .options{
+      margin: 0 5px;
+    }
 //   }
 
-//   .option-picked{
-//     display: grid;
-//     place-items: center;
-//     color: white;
-//   }
+  .option-picked-container{
+    display: "flex";
+    justify-content: "center";
+    align-items: 'center';
+    flex-direction: 'column';
+    gap: 10px;
+
+  }
+
+  .option-picked{
+    display: grid;
+    place-items: center;
+    color: white;
+  }
 // }
 
 // @media screen and (max-width: 480px){
@@ -184,6 +214,3 @@ body{
 //   }
 
 // }
-
-
-

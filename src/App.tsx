@@ -19,8 +19,8 @@ function App() {
         <>  
             <Header />
             <div className="containerBox">
-                <div className="container w-50 d-flex align-items-center justify-content-center flex-column" style={{border: '1px solid white'}}>
-                    <h2>Random Options Selector!</h2>
+                <div className="box">
+                    <h2 className='text-center text-white' style={{fontWeight: 'bold'}}>Random Options Selector!</h2>
                     <Selector addOptions={addOption} />
                     <RandomOption options={options} />
                 </div>

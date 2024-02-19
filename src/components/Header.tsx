@@ -6,9 +6,9 @@ import { Navbar, Container, Nav, Button } from 'react-bootstrap'
 
 export default function Header() {
   return (
-    <Navbar expand="lg" className="mb-3 rounded">
+    <Navbar expand="md" className="mb-3 rounded">
       <Container>
-        <img src={xsLogo} width={80} />
+        <img src={xsLogo} width={100} />
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="white" className="bi bi-list" viewBox="0 0 16 16">
             <path fillRule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
