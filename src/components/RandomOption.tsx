@@ -32,9 +32,9 @@ export default function RandomOption({ options }: Props) {
             <div className="option-picked-container">
                 {randomOption && (
                     <>
-                        <div className="option-picked">
+                        <div className="option-picked" style={{marginTop: '0.5em'}}>
                             <h4>Option picked is:</h4>
-                            <span>*{randomOption.name}*</span>
+                            <span>"{randomOption.name}"</span>
                         </div>
                     </>
                 )}

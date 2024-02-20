@@ -45,6 +45,7 @@ export default function Selector({ addOptions }: Props) {
           name="name"
           aria-required
           ref={inputRef}
+          id="input"
         />
         <button className={`button ${option.name === '' ? 'button-empty' : 'button'}`}>Add</button>
       </form>

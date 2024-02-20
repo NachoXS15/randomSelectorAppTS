@@ -9,7 +9,7 @@ export default function OptionsList({ options }: Props) {
   return (
     <>
       {options.map((option) => {
-        return <Option option={option} key={option.id}  />;
+        return <Option option={option} key={option.id}   />;
       })}
     </>
   );

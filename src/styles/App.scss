@@ -3,86 +3,136 @@
 
 $fondo: url('../assets/img/fondo.jpg');
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Poppins, sans-serif;
 }
 
-body{
+body {
   min-height: 100vh;
   background-image: $fondo;
   background-size: cover;
   background-attachment: fixed;
+  background-position: center;
 }
 
+// queries
 
-.header{
+.containerBox{
   width: 100%;
-  height: 80px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  
-  .logo{
-    width: 70px;
-    height: 70px;
-  }
-
-  .nav-items{
-    width: 45px;
-    height: 45px;
-    color: white;
-    margin: 0 10px;
-  }
-}
-
-.container{
-  min-height: 75vh;
-  display: grid;
-  place-items: center;
-}
-
-.box{
-  width: 600px;
-  height: 440px;
-  border: 3px solid white;
-  margin: 0 auto;
-  position: relative;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.box {
+  width: 50%;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
+  border: 1px solid white;
+}
 
-  h2{
-    font-family: Poppins, sans-serif;
-    text-align: center;
-    margin-bottom: 20px;
-    color: white;
-    text-decoration: underline;
+#input{
+  border: none;
+  background: none;
+  border-bottom: 1px solid white;
+  margin-right: 10px;
+  color: white;
+}
+
+#input:focus{
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .box{
+    width: 90%;
   }
+}
 
-  form{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 30px;
-
-    input{
-      border: none;
-      background-color: transparent;
-      border-bottom: 1px solid white;
-      margin-right: 15px;
-      outline: none;
-      color: white;
-    }
-
-    input::placeholder{
-      border: none;
-    }  
+@media screen and (max-width: 520px) {
+  .box{
+    width: 90%;
   }
+}
+
+@media screen and (max-width: 420px) {
+  .box{
+    width: 90%;
+  }
+}
+
+
+// .header{
+//   width: 100%;
+//   height: 80px;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: center;
+
+//   .logo{
+//     width: 70px;
+//     height: 70px;
+//   }
+
+//   .nav-items{
+//     width: 45px;
+//     height: 45px;
+//     color: white;
+//     margin: 0 10px;
+//   }
+// }
+
+// .containerBox{
+//   min-height: 75vh;
+//   display: grid;
+//   place-items: center;
+// }
+
+// .box{
+//   width: 600px;
+//   height: 440px;
+//   border: 3px solid white;
+//   margin: 0 auto;
+//   position: relative;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+
+//   h2{
+//     font-family: Poppins, sans-serif;
+//     text-align: center;
+//     margin-bottom: 20px;
+//     color: white;
+//     text-decoration: underline;
+//   }
+
+//   form{
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin-bottom: 30px;
+
+//     input{
+//       border: none;
+//       background-color: transparent;
+//       border-bottom: 1px solid white;
+//       margin-right: 15px;
+//       outline: none;
+//       color: white;
+//     }
+
+//     input::placeholder{
+//       border: none;
+//     }  
+//   }
   .button{
     border: none;
     background-color: transparent;
@@ -102,7 +152,7 @@ body{
   .button-none{
     display: none;
   }
-  
+
   .options-container{
     width: 60%;
     height: 70px;
@@ -111,12 +161,12 @@ body{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-
+  }
 
     .options{
       margin: 0 5px;
     }
-  }
+//   }
 
   .option-picked-container{
     display: "flex";
@@ -132,9 +182,52 @@ body{
     place-items: center;
     color: white;
   }
+// }
 
-  
-}
+// @media screen and (max-width: 480px){
+//   body{
+//     min-height: 100vh;
+//     min-width: 100vh;  
+//   }
 
+//   header{
+//     width: 100%;
+//     height: 40vh;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-around;
+//   }
 
+//   .container{
+//     border: 1px solid red;
+//     min-height: 600px;
+//     display: grid;
+//     place-items: center;
+//     margin-top: 60px;
 
+//     .box{
+//       width: 80%;
+//       height: 170vh;
+
+//       h2{
+//         font-size: 40px;
+//       }
+//     }
+
+//   }
+// }
+
+// @media screen and (max-width: 768px){
+//   body{
+//     min-height: 100vh;
+//     min-width: 100vh;  
+//   }
+
+//   header{
+//     width: 100%;
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-around;
+//   }
+
+// }
