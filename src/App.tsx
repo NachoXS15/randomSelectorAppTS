@@ -20,7 +20,7 @@ function App() {
             <Header />
             <div className="containerBox">
                 <div className="box">
-                    <h2 className='text-center text-white' style={{fontWeight: 'bold'}}>Random Options Selector!</h2>
+                    <h2 className='text-center text-white p-2' style={{fontWeight: 'bold'}}>Random Options Selector!</h2>
                     <Selector addOptions={addOption} />
                     <RandomOption options={options} />
                 </div>

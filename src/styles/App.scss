@@ -43,11 +43,28 @@ body {
   background: none;
   border-bottom: 1px solid white;
   margin-right: 10px;
+  color: white;
+}
+
+#input:focus{
+  outline: none;
+}
+
+@media screen and (max-width: 768px) {
+  .box{
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .box{
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 420px) {
   .box{
-    width: 75%;
+    width: 90%;
   }
 }
 
